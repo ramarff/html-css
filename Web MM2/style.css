@@ -1,0 +1,130 @@
+body{
+	margin:0;
+}
+header{
+	position:fixed;
+	margin:0;
+	width:100%;
+	background-color:#AAAAAA;
+	top:0;
+	left:0;
+	height:200px;
+}
+header h1{
+	text-align:center;
+	font-size:50px;
+	line-height:100px;
+	text-shadow:0px 0px 1px green,
+	0px 0px 5px salmon,
+	0px 0px 5px salmon,
+	0px 0px 5px salmon,
+	0px 0px 6px salmon,
+	0px 0px 6px salmon,
+	0px 0px 6px salmon,
+	0px 0px 6px salmon,
+	0px 0px 6px salmon
+	;
+	color:red;
+}
+header p{
+	margin-top:-60px;
+	text-align:center;
+	color:lightskyblue;
+	font-weight:bold;
+}
+nav{
+	background-color:#333;
+	top:200px;
+	position:fixed;
+	width:100%;
+}
+nav ul{
+	list-style-type:none;
+	/*float:left;*/
+	margin:0;
+	padding:0;
+}
+nav ul li{
+	float:left;
+}
+nav ul li a, .dropdown-btn{
+	padding:15px;
+	display:inline-block;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+}
+nav ul li a:hover, .dropdown:hover{
+	background-color:#111;
+}
+nav ul li a.active{
+	background-color:red;
+}
+nav ul li.dropdown{
+	display:inline-block;
+}
+.dropdown-content{
+	display:none;
+	position:absolute;
+	min-width:160px;
+	background-color:#f9f9f9;
+	border:1px solid #AAAAAA;
+}
+nav ul li .dropdown-content a{
+    padding:10px;
+	color:black;
+	text-align:left;
+	display:block;
+}
+nav ul li .dropdown-content a:hover{
+	background-color:#f1f1f1;
+}
+nav ul li.dropdown:hover .dropdown-content{
+	display:block;
+}
+nav ul li.search{
+	float:right;
+	text-align:center;
+	position:static;
+	margin-top:5px;
+	margin-right:5px;
+}
+nav ul li.search .search-wrapper{
+	display:inline-flex;
+	font-size:20px;
+}
+nav ul li.search .search-input{
+	font-size:inherit;
+	padding:0.2em 0.5em;
+	border-radius:0.2em 0 0 0.2em;
+	border:0.2em solid lightblue;
+	outline:0;
+}
+nav ul li.search .search-input:hover,
+nav ul li.search .search-input:focus{
+	border-color:lightskyblue;
+}
+nav ul li.search .search-button{
+	font-size:inherit;
+	border-radius:0 0.2em 0.2em 0;
+	border:0.2em solid lightblue;
+	border-left:0;
+	background-color:lightblue;
+}
+nav ul li.search .search-button:hover,
+nav ul li.search .search-button:focus{
+	border-color:lightskyblue;
+	background-color:lightskyblue;
+}
+.container{
+	border:1px solid black;
+	width:100%;
+	margin-top:241px;
+	padding:5px;
+	overflow: auto;
+	margin-left:1px;
+	margin-right:1px;
+}
+p{
+	margin-top:250px;
+}
