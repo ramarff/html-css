@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        /* font */
+        @font-face{
+            font-family:"thin";
+            src: url("assets/font/Montserrat/Montserrat-Thin.ttf");
+        }
+        @font-face{
+            font-family:"extra-light";
+            src:url("assets/font/Montserrat/Montserrat-ExtraLight.ttf");
+        }
+        @font-face {
+            font-family:"bold";
+            src: url("assets/font/Montserrat/Montserrat-Bold.ttf");
+        }
+        @font-face {
+            font-family:"regular";
+            src: url("assets/font/Montserrat/Montserrat-Regular.ttf");
+        }
+        /* akhir font */
+        body{
+            font-family:regular;
+        }
+        .card{
+            overflow:hidden;
+            position: relative;
+        }
+        nav,.nav-link{
+            text-transform:uppercase;
+            color:white;
+        }
+        nav a.active{
+            color:#475CFD;
+            font-family:bold;
+        }
+        nav h5{
+            font-family:bold;
+        }
+
+        .main{
+         color:white;
+        }
+        .main span{
+            font-family:bold;
+            color:#475CFD;
+        }
+        .main p{
+            font-size:20px;
+            font-family:thin;
+            margin-top:20px;
+        }
+        .main button{
+            background-color:#FF4887;
+            color:white;
+            margin-top:20px;
+        }
+        .doctor{
+            position:absolute;
+            right:-120px;
+            bottom:-73px;
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+      <div class="card pb-3" style="background-color:#050A27">
+        <div class="card-body  pl-5">
+            <nav class="nav">
+                <h5 class="mr-5">Jennie<br>molly</h5>
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Schedule</a>
+                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+
+            <div class="row main mt-3">
+                <div class="col-md-6">
+                    <h1 class="display-3">Your Personal Next  <span>Expert</span> Doctor</h1>
+                    <p>Hello. Saya akan membantu anda untuk mendapatkan tubuh yang lebih ideal
+                       dan selalu sehat
+                    </p>
+                    <button class="btn btn-lg">Book Now</button>
+                </div>
+            </div>
+
+            <img src="assets/img/doctor.png" alt="doctor" class="doctor">
+        </div>
+     </div>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

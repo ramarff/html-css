@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        *{
+            scroll-behavior:smooth;
+        }
+        body{
+            background-color: #7278f4 ;
+            color:#fff;
+        }
+        /* Jumbotron */
+        .jumbotron{
+            /* margin-top:-70px; */
+            height:100vh;
+            background-color:inherit;
+        }
+        .jumbotron .row .col-sm-7 h1{
+            font-weight:bold;
+            font-size:3.5vw;
+        }
+        .jumbotron p{
+            font-size:1.5vw;
+            text-align:justify;
+        }
+        .jumbotron .btn{
+            font-size:1.2vw;
+            font-weight:500;
+        }
+        /* Akhir Jumbotron */
+
+        /* Navbar */
+        .navbar{
+            background-color:#7278f4 ;
+        }
+        .nav-link{
+            color:white;
+            margin-right:15px;
+        }
+        .navbar-brand img{
+            width:50px;
+        }
+        /*  Akhir Navbar */
+
+        /* About */
+        .about{
+            color:#000;
+            background-color:#fff;
+        }
+        .about h1{
+            font-size:3.5vmax;
+            font-weight:300;
+        }
+        .about h3{
+            margin-top:5px;
+            font-size:3vw;
+        }
+        .about p{
+            margin-top:-1vw;
+            font-size:1.5vw;
+        }
+        .about img[alt="scholarship"]{
+            width:10vmax;
+        }
+        /* Akhir About */
+
+        /* Gallery */
+        .gallery .container .card{
+            color:black;
+        }
+        .gallery .container  .card h5{
+            font-weight:bold;
+        }
+        .gallery{
+            background-color:#765dff;
+        }
+        .gallery h1{
+            font-size:3vmax;
+            font-weight: bold;
+        }
+        /* Akhir Gallery */
+
+        /* Testimonial */
+        .testimonial{
+            color:#000;
+            background-color:#fff;
+        }
+
+        .testimonial{
+            margin-top:100px;
+        }
+        .testimonial h5{
+            text-align:center;
+            font-weight:200;
+            font-style:italic;
+            font-size:24px;
+        }
+
+        .testimonial figure img{
+            width:60px;
+            margin:20px 15px 5px;
+            opacity:0.5;
+        }
+        .testimonial figure img.utama{
+            width:90px;
+            opacity:1;
+            margin-top:5px;
+        }
+        .testimonial figure h5{
+            font-size:16px;
+            font-weight:bold;
+            font-style: normal ;
+            color:#1C2C5D;
+        }
+        .testimonial figure p{
+            font-size:12px;
+            color:#ACACAC;
+            margin-top:-5px;
+        }
+        .testimonial figure figcaption{
+            text-align:center;
+        }
+
+        /* Akhir Testimonial */
+
+        /* Responsive */
+        @media screen and (max-width:992px) {
+            .jumbotron{
+                height:50vh;
+            }
+            .jumbotron .row{
+                margin-top:7vh;
+            }
+            /* .jumbotron .row .col-sm-7 h1{
+                font-size:3vw;
+                font-weight:bold;
+            } */
+            .about h1{
+                margin-top:5px;
+            }
+            
+        }
+        @media screen and (max-width:768px) {
+            .jumbotron{
+                height:50vh;
+            }
+            .jumbotron .row{
+                margin-top:10vh;
+            }
+            .jumbotron .row .col-sm-7 h1{
+                font-weight:bold;
+                font-size:5vw;
+            }
+            .jumbotron .row .col-sm-7 p{
+                font-size:2vw;
+            }
+            .jumbotron .btn{
+                font-size:2vw;
+            }
+            .about h1{
+                margin-top:30px;
+                font-size:calc(3vmax + 4.5vw);
+            }
+            .about h3{
+                font-size:calc(3vw + 2.5vw);
+            } 
+            .about p{
+                font-size:calc(2vw + 1.5vw);
+            } 
+            .about img[alt="scholarship"]{
+                width:17vmax;
+            }    
+            .gallery h1{
+                font-size:calc(3vmax + 2vw);
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .jumbotron{
+                height:50vh;
+            }
+            .jumbotron .row{
+                margin-top:17vh;
+            }
+            .jumbotron .row .col-sm-7 h1{
+                font-weight:bold;
+                font-size:9vw;
+            }
+            .jumbotron .row .col-sm-7 p{
+                font-size:3vw;
+            }
+            .jumbotron img{
+                display:none;
+            }
+            .jumbotron .btn{
+                font-size:2.5vw;
+            }
+            .about h1{
+                margin-top:10px;
+                font-size:calc(2vmax + 2.5vw);
+            }
+            .about h3{
+                font-size:calc(3vw + 2.5vw);
+            }
+            .about p{
+                font-size:calc(2vw + 1vw);
+            }
+            .about img[alt="scholarship"]{
+                width:11vmax;
+            }
+            /* gallery */
+            .gallery h1{
+                font-size:calc(2vmax + 2.5vw);
+            }
+            .testimonial h1{
+                font-size:calc(2vmax + 2.5vw);
+            }
+        }
+    
+        /* Akhir Responsive */
+    </style>
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-expand-md fixed-top">
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-right text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-lg-5">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#home">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Paket Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid mb-0" id="home">
+    <div class="container-lg ">
+        <div class="row flex-lg-fill  align-content-center">
+            <div class="col-sm-7  align-self-center" style="color:white">
+                <h1>Join to freemasonry</h1>
+                <p class="lead">Freemansory adalah sebuat perusahaan di bidang Travel dan Pariwisata. Kami akan melayani customer dengan sepenuh hati dan akan memuaskan customer dalam berwisata</p>
+                <a href="#about" class="btn btn-warning">Tentang Kami</a>
+            </div>
+            <div class="col-sm-5">
+                <img src="assets/img/freemasonry.png" alt="freemasonry" class="img-fluid">
+            </div>
+        </div>       
+    </div>
+    </div>
+</div>
+
+    <section class="about  d-flex justify-content-center pb-5" id="about">
+        <div class="container-lg">
+            <div class="row pt-lg-3 pt-sm-0">
+                <div class="col-lg text-center">
+                    <h1>Tentang Kami</h1>
+                </div>
+            </div>
+            <div class="row pt-3">
+                    <div class="col-md-4 text-center pt-3">
+                        <img src="assets/img/employee.png" alt="scholarship" class="img-fluid">
+                        <h3>Professional</h3>
+                        <p>Kami sangat professional di bidang travel dan pariwisata.</p>
+                    </div>
+                    <div class="col-md-4 text-center pt-3">
+                        <img src="assets/img/happy.png" alt="scholarship" class="img-fluid">
+                        <h3>Puas</h3>
+                        <p>Pelanggan puas kami senang</p>
+                    </div>
+                    <div class="col-md-4 text-center pt-3">
+                        <img src="assets/img/freemasonry (1).png" alt="scholarship" class="img-fluid">
+                        <h3>worship</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="gallery pt-3 pb-5" id="gallery">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col text-center">
+                    <h1>Beberapa paket wisata yang kami sediakan</h1>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-md  mb-3">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md mb-3">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img src="assets/img/2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Liburan Keluarga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+    </section>
+
+    <section class="testimonial pt-3 mt-0" id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Testimonials</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center pt-5">
+                <div class="col-lg-8">
+                    <h5>"Bekerja dengan suasana hati yang lebih asik dan mempelajari hal baru setiap harinya."</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 justify-content-center d-flex">
+                    <figure class="figure">
+                        <img src="assets/img/img1.png" class="figure-img img-fluid rounded-circle" alt="Testimonial 1">
+                    </figure>
+                    <figure class="figure">
+                        <img src="assets/img/img2.png" class="figure-img img-fluid rounded-circle utama" alt="Testimonial 2">
+                        <figcaption class="figure-caption">
+                        <h5>Sunny Ye</h5>
+                        <p>Designer</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="assets/img/img3.png" class="figure-img img-fluid rounded-circle" alt="Testimonial 3">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js" integrity="sha512-g2PN+aYR0KupTVwea5Ppqw4bxWLLypWdd+h7E0ydT8zF+/Y2Qpk8Y1SnzVw6ZCVJPrgB/91s3VfhVhP7Y4+ucw==" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

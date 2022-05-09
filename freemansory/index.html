@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Responsive Website Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Poppins", sans-serif;
+            scroll-behavior:smooth;
+        }
+        /* section{
+            padding:100px;
+        } */
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            padding:20px 50px;
+            z-index:1000;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        header.sticky{
+            background:#fff;
+            padding:20px 50px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);          
+        }
+        header .logo{
+            width:50px;
+        }
+        header.sticky .logo{
+            color:#111; 
+        }
+        header ul{
+            position:relative;
+            display:flex;
+        }
+        header ul li{
+            position: relative;
+            list-style:none;
+        }
+        header ul li a{
+            position: relative;
+            display:inline-block;
+            margin:0 15px;
+            color:#fff;
+            text-decoration:none;
+        }
+        header.sticky ul li a{
+            color:#111;
+        }
+        /* Banner */
+        .banner{
+            position: relative;
+            min-height:100vh;
+            background-color:#7278f4;
+            display:flex;
+            align-items:center;
+            padding:100px;
+        }
+        .banner .content-banner{
+            width:60%;
+        }
+        .banner .content-banner h3{
+            font-size:3.5em;
+            color:#fff;
+            font-weight:500;
+            line-height:1.5em;
+        }
+        .banner .content-banner p{
+            color:#fff;
+        }
+        .banner .image img{
+            margin-top:-40px;
+            margin-right:-70px;
+        }
+        .about{
+            display:flex;
+            align-items:center;
+            height:400px;
+            padding:10px;
+            flex-direction:row;
+            /* justify-content:center; */
+        }
+        .about .col img{
+            width:350px;
+        }
+        .about .col-satu{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        .about .col-satu img{
+            width:100px;
+            text-align:center;
+        }
+        .btn{
+            position: relative;
+            background:#e9b31e;
+            display:inline-block;
+            color: #000;
+            margin-top:10px;
+            padding:10px 10px;
+            font-size:12px;
+            /* text-transform: uppercase; */
+            text-decoration:none;
+            letter-spacing:2px;
+            font-weight:500;
+            border-radius:3px;
+            /* display:flex; */
+            /* justify-content:center; */
+        }
+        .container{
+            width:90%;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <header>   
+        <a href=""><img src="assets/img/logo.jpg" alt="" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Help</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="content-banner">
+            <h3>Join to freemasonry</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, impedit molestias. Ex distinctio quam, culpa suscipit officiis totam veritatis!</p>
+            <a href="" class="btn">Get Started</a>
+        </div>
+        <div class="image">
+            <img src="assets/img/freemasonry.png" alt="">
+        </div>
+    </section>
+    <section class="about">
+        <div class="col">
+            <img src="assets/img/tangga.jpg" alt="">
+        </div>
+        <div class="col-satu">
+            <img src="assets/img/education.png" alt="scholarship">
+            <h1>scholarship</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+              
+              
+    </section> 
+    <script>
+        window.addEventListener("scroll", function(){
+            var header=document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        function toggleMenu(){
+            var menuToggle=document.querySelector(".toggle");
+            var menu=document.querySelector(".menu");
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
